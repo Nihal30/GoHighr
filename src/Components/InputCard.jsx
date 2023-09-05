@@ -1,0 +1,63 @@
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import CardMedia from '@mui/material/CardMedia';
+import TextField from '@mui/material/TextField';
+import {Link} from "react-router-dom"
+import Hero1 from "../img/hero1.png"
+import "./Style.css"
+
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
+
+export default function InputCard() {
+  return (
+    <Card sx={{ maxWidth:300,height:450,marginLeft:80, marginTop:10 }}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14,color:"#E67E22" }}  gutterBottom>
+        Lorem Ipsum is simply dummy text of the printing
+        </Typography>
+        <CardMedia
+        component="img"
+        alt="Hero image"
+        height="140"
+        src={Hero1}
+      />
+       <TextField
+          id="input-box"
+          label="Input Text"
+          variant="outlined"
+          fullWidth
+        />
+        
+        
+       
+        <Typography variant="body2" sx={{marginTop:2}}>
+          well meaning and kindly.
+         
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <Link to="/Otp" >
+      <Button  sx={{backgroundColor:"#E67E22" ,width:"200%",color:"white", marginLeft:4,}} >Get Otp</Button>
+        </Link>
+      </CardActions>
+      <hr style={{ borderBottom: '0.2px solid gray' }} />
+      <Typography variant="body2">
+        Additional information goes here.
+      </Typography>
+
+    </Card>
+  );
+}

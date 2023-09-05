@@ -1,0 +1,30 @@
+.h1{
+    font-style: bold;
+    color:blue;
+
+}
+.span{
+    color: #FF5733;
+}
+.spacer {
+    height: 30px; 
+    background-color: #E67E22; 
+}
+.card {
+    border: 1px solid #ccc; /* Add a border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    padding: 20px; /* Add padding to the card */
+    width: 300px; /* Set a width for the card */
+    height: 400px;
+    margin: 30px auto; /* Center the card horizontally */
+    text-align: center; /* Center the content inside the card */
+    background-color: aliceblue;
+  }
+  .input-phon{
+    border: none;
+    width: 250px;
+    height: 30px;
+    padding: 5px;
+  }
+  
+  
