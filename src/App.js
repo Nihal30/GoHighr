@@ -3,11 +3,11 @@ import Header from "./Components/Header";
 import InputCard from "./Components/InputCard";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Otp from "./Components/Otp";
-import HorizontalStepper from "./Components/Stepper";
 import Step2 from "./Components/Step2";
 import Step3 from "./Components/Step3";
 import Booking from "./Components/Booking";
-
+import Dashboard from "./Components/Dashboard";
+import Step1 from "./Components/Step1";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
     element: <Otp />,
   },
   {
-    path: "/stepper",
-    element: <HorizontalStepper />,
+    path: "/step1",
+    element: <Step1 />,
   },
   {
     path: "/step2",
@@ -34,7 +34,10 @@ const router = createBrowserRouter([
     path: "/booking",
     element: <Booking />,
   },
-
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
 ]);
 
 function App() {

@@ -20,33 +20,41 @@ const bull = (
   </Box>
 );
 
-export default function HorizontalStepper() {
+export default function Step1() {
   return (
     <div>
-    <div style={{marginTop:40}} >
-        <span style={{backgroundColor:"white",padding:5,fontSize:20,borderRadius:10}} >Step 1/3</span>
-    </div>
-      <Card sx={{ marginTop: 3, maxWidth: 1000, marginLeft: 35, height: 450 }}>
+      <div style={{ marginTop: 40 }}>
+        <span
+          style={{
+            backgroundColor: "white",
+            padding: 5,
+            fontSize: 20,
+            borderRadius: 10,
+          }}
+        >
+          Step 1/3
+        </span>
+      </div>
+      <Card sx={{ marginTop: 3, maxWidth: 1000, marginLeft: "auto", marginRight: "auto" }}>
         <CardContent>
           <Grid
             container
-            spacing="1px"
-            item
-            sx={{ display: "flex ", alignItems: "center " }}
+            spacing={2}
+            sx={{
+              flexDirection: "column",
+              alignItems: "center",
+            }}
           >
-            {" "}
             {/* Create a Grid container */}
             <Grid
               item
-              xs={6}
-              md={8}
-              style={{ backgroundColor: "yellow", marginTop: 10 }}
+              xs={12}
+              md={6}
+              style={{ textAlign: "center" }}
             >
-              {" "}
               {/* Typography and Image in the first column */}
               <Typography
                 sx={{
-                  fontSize: 14,
                   marginTop: 5,
                   color: "black",
                   fontSize: 20,
@@ -57,17 +65,9 @@ export default function HorizontalStepper() {
               </Typography>
               <Button size="small">jan 23</Button>
               <Button size="small">may 23</Button>
-            </Grid>
-            <Grid
-              item
-              xs={6}
-              md={8}
-              style={{ backgroundColor: "yellow", marginTop: -40 }}
-            >
-              {" "}
-              {/* Typography and Image in the second column */}
+
               <Typography
-                sx={{ fontSize: 14, color: "black", fontSize: 20 }}
+                sx={{ color: "black", fontSize: 20 }}
                 gutterBottom
               >
                 What do you wish to pursue ?
@@ -75,13 +75,14 @@ export default function HorizontalStepper() {
               <Grid>
                 <Button size="small">PG Diploma</Button>
                 <Button size="small">Master's</Button>
-                <Button size="small">Bachilor’s</Button>
+                <Button size="small">Bachelor’s</Button>
                 <Button size="small">MBA</Button>
-                <Button size="small">phD</Button>
+                <Button size="small">PhD</Button>
                 <Button size="small">Not Decided</Button>
               </Grid>
             </Grid>
-            <Grid item sx={6} md={4}>
+
+            <Grid item xs={12} md={6}>
               <CardMedia
                 component="img"
                 alt="Hero image"
@@ -89,23 +90,25 @@ export default function HorizontalStepper() {
                 sx={{ maxHeight: "100%", margin: "auto", display: "block" }}
               />
             </Grid>
-            <CardActions>
-              <Link to="/step2">
-                <Button
-                  sx={{
-                    alignItems: "center",
-                    marginLeft: 50,
-                    backgroundColor: "#E67E22",
-                    color: "white",
-                  }}
-                >
-                  Next
-                </Button>
-              </Link>
-            </CardActions>
           </Grid>
+          <CardActions>
+            <Link to="/step2">
+              <Button
+                sx={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  backgroundColor: "#E67E22",
+                  color: "white",
+                  width: 200,
+                  marginTop: 10,
+                }}
+              >
+                Next
+              </Button>
+            </Link>
+          </CardActions>
         </CardContent>
       </Card>
-      </div>
+    </div>
   );
 }

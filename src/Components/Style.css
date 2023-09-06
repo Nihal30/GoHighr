@@ -1,6 +1,6 @@
 .h1{
     font-style: bold;
-    color:blue;
+    
 
 }
 .span{
@@ -25,6 +25,38 @@
     width: 250px;
     height: 30px;
     padding: 5px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+  
+  .divider {
+    border: 0.2px solid gray;
+  }
+  
+  .additional-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .card {
+      max-width: 100%;
+    }
   }
   
   

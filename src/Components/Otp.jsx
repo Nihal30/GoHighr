@@ -9,54 +9,53 @@ import CardMedia from '@mui/material/CardMedia';
 import TextField from '@mui/material/TextField';
 import "./Style.css"
 import { Link } from 'react-router-dom';
+import Checkbox from '@mui/material/Checkbox';
+import Hero2 from "../img/hero2.png"
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export default function Otp() {
   return (
-    <Card sx={{ maxWidth:300,height:450,marginLeft:80, marginTop:10 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
+    <div className="container">
+      <Card className="card">
+        <CardContent>
+          <Typography variant="h6" color="textSecondary" gutterBottom>
+            Word of the Day
+          </Typography>
+          <CardMedia
+            component="img"
+            alt="Hero image"
+            height="140"
+            src={Hero2}
+          />
+          <TextField
+            id="input-box"
+            label="Input Text"
+            variant="outlined"
+            fullWidth
+          />
+          <Typography variant="body2" sx={{ marginTop: 2 }}>
+            well-meaning and kindly.
+            {'"a benevolent smile"'}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Link to="/step1">
+            <Button
+              variant="contained"
+              sx={{ backgroundColor: "#E67E22", color: "white" }}
+              fullWidth
+            >
+              Submit
+            </Button>
+          </Link>
+        </CardActions>
+        <hr className="divider" />
+        <Typography variant="body2" className="additional-info">
+          <Checkbox {...label} />
+          Additional information goes here.
         </Typography>
-        <CardMedia
-        component="img"
-        alt="Hero image"
-        height="140"
-        src=''
-      />
-       <TextField
-          id="input-box"
-          label="Input Text"
-          variant="outlined"
-          fullWidth
-        />
-        
-        
-       
-        <Typography variant="body2" sx={{marginTop:2}}>
-          well meaning and kindly.
-         
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-      <Link to="/stepper" >
-        <Button  sx={{backgroundColor:"#E67E22" ,width:"200%",color:"white", marginLeft:4,}} >Submit</Button>
-        </Link>
-      </CardActions>
-      <hr style={{ borderBottom: '0.2px solid gray' }} />
-      <Typography variant="body2">
-        Additional information goes here.
-      </Typography>
-
-    </Card>
+      </Card>
+    </div>
   );
 }

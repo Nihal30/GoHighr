@@ -1,6 +1,5 @@
 import * as React from "react";
-
-import Grid from "@mui/material/Grid"; // Import Grid from Material-UI
+import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -24,104 +23,107 @@ const bull = (
 export default function Step2() {
   return (
     <div>
-      <div style={{ marginTop: 40 }}>
+      <div style={{ marginTop: 20, marginBottom: 20, textAlign: "center" }}>
         <span
           style={{
             backgroundColor: "white",
-            padding: 5,
-            fontSize: 20,
-            borderRadius: 10,
+            padding: "5px 10px",
+            fontSize: "20px",
+            borderRadius: "10px",
           }}
         >
           Step 2/3
         </span>
       </div>
-      <Card sx={{ marginTop: 3, maxWidth: 1000, marginLeft: 35, height: 450 }}>
+      <Card
+        sx={{
+          maxWidth: "100%",
+          margin: "0 10px",
+          boxShadow: "none",
+        }}
+      >
         <CardContent>
           <Grid
             container
             spacing={2}
-            sx={{ display: "flex ", alignItems: "center " }}
+            sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
           >
-            {" "}
-            {/* Create a Grid container */}
-            <Grid
-              item
-              xs={6}
-              md={8}
-              style={{  marginTop: 10 }}
-            >
-              {" "}
-              {/* Typography and Image in the first column */}
+            <Grid item xs={12} md={6}>
               <Typography
                 sx={{
-                  fontSize: 14,
-                  marginTop: 5,
+                  fontSize: "18px",
+                  marginTop: "10px",
                   color: "black",
-                  fontSize: 20,
                 }}
                 gutterBottom
               >
-                What is your current education ?
+                What is your current education?
               </Typography>
-              <Grid container>
-                <Grid xs={4}>
-                  <Button size="small">10th Standard</Button>
+              <Grid container spacing={2}>
+                <Grid item xs={6} sm={3}>
+                  <Button variant="contained" size="small">
+                    10th Standard
+                  </Button>
                 </Grid>
-                <Grid xs={4}>
-                  <Button size="small">12th Standard</Button>
+                <Grid item xs={6} sm={3}>
+                  <Button variant="contained" size="small">
+                    12th Standard
+                  </Button>
                 </Grid>
-                <Grid xs={4}>
-                  <Button size="small">Bachilor’s Degree</Button>
+                <Grid item xs={6} sm={3}>
+                  <Button variant="contained" size="small">
+                    Bachelor’s Degree
+                  </Button>
                 </Grid>
-                <Grid xs={4}>
-                  <Button size="small">Master’s Degree</Button>
+                <Grid item xs={6} sm={3}>
+                  <Button variant="contained" size="small">
+                    Master’s Degree
+                  </Button>
                 </Grid>
-                <Grid xs={4}>
-                  <Button size="small">MBBS/MD</Button>
+                <Grid item xs={6} sm={3}>
+                  <Button variant="contained" size="small">
+                    MBBS/MD
+                  </Button>
                 </Grid>
               </Grid>
               <Typography
                 sx={{
-                  fontSize: 14,
+                  fontSize: "18px",
                   color: "black",
-                  fontSize: 20,
-                  marginTop: 5,
+                  marginTop: "20px",
                 }}
                 gutterBottom
               >
                 Expected or Gained Percentage
               </Typography>
-              <Grid>
-                <TextField id="input-box" label="Grades " variant="outlined" />
-              </Grid>
-              <Grid
-                item
-                xs={6}
-                md={8}
-                style={{ backgroundColor: "yellow", marginTop: -40 }}
-              >
-                {" "}
-              </Grid>
+              <TextField
+                id="input-box"
+                label="Grades"
+                variant="outlined"
+                fullWidth
+              />
             </Grid>
-            <Grid item sx={6} md={4}>
+            <Grid item xs={12} md={6}>
               <CardMedia
                 component="img"
                 alt="Hero image"
                 src={Hero4}
-                sx={{ maxHeight: "90%", margin: "auto", display: "block" }}
+                sx={{
+                  maxHeight: "90%",
+                  margin: "auto",
+                  display: "block",
+                }}
               />
             </Grid>
-            <CardActions>
+            <CardActions sx={{ justifyContent: "center" }}>
               <Link to="/step3">
                 <Button
+                  variant="contained"
                   sx={{
-                    alignItems: "center",
-                    marginLeft: 50,
                     backgroundColor: "#E67E22",
                     color: "white",
-                    width: 200,
-                    marginTop: 5,
+                    width: "200px",
+                    marginTop: "20px",
                   }}
                 >
                   Next
