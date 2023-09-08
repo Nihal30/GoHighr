@@ -1,22 +1,23 @@
 import "./App.css";
 import Header from "./Components/Header";
-import InputCard from "./Components/InputCard";
+
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Otp from "./Components/Otp";
 import Step2 from "./Components/Step2";
 import Step3 from "./Components/Step3";
 import Booking from "./Components/Booking";
 import Dashboard from "./Components/Dashboard";
 import Step1 from "./Components/Step1";
+import OtpGenration from "./Components/OtpGenration";
+import OtpVerify from "./Components/OtpVerify";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <InputCard />,
+    element: <OtpGenration />,
   },
   {
     path: "/otp",
-    element: <Otp />,
+    element: <OtpVerify />,
   },
   {
     path: "/step1",
